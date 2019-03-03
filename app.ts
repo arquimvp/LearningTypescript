@@ -1,12 +1,24 @@
-var a = 7;
-var b = 12;
+//✅:
+let isIronMan : boolean = true;
+//✅:
+    let isWonderWoman : boolean;	
+//🚫:
+    let isThor = true;
 
-if (a === 7) {
-    let a = 4;
-    var b = 1;
-
-    console.log('Dentro del if: ' + a + ' - ' + b );
-
+if(isIronMan) {
+    console.log('is ironman');
+}else{
+    console.log('no es ironman');
 }
 
-console.log('Fuera del if: ' + a + ' - ' + b);
+isIronMan = revertir();
+
+if(isIronMan) {
+    console.log('is ironman');
+}else{
+    console.log('no es ironman');
+}
+
+function revertir(){
+    return false;
+}
