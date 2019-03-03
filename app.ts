@@ -1,19 +1,19 @@
-let antman : string = "Antman el hombre hormiga";
-let hulk : string = 'Hulk el hombre verde';
-let worderWoman : string = `Wonder woman la mujer maravilla`;
+//✅
+let cualquierCosa: any;
 
-//Puedes verificar que al escribir antman tendras acceso a todos los metodos y propiedades de un string.
-antman.length;
-antman.split('/',0);
+//Tambien podemos declararlo e inicializarlo: 
+/* let cualquierCosa: any = 23; */
 
+//O simplemente declararlo:
+/* let cualquierCosa; */
 
-//Concatenar a la antigua:
-let oldConcat: string = "Los super heroes son: " + antman + ", " + hulk + worderWoman;
+cualquierCosa = "Un texto";
+console.log(cualquierCosa.charAt(0));
 
-//Concatenar con backtick:
-let newConcat: string = `Los super heroés son: ${antman}, ${hulk}, ${worderWoman} `;
+cualquierCosa = 123.123123;
+console.log(cualquierCosa.toFixed(2));
 
+cualquierCosa = true;
+console.log(cualquierCosa);
 
-console.log(oldConcat);
-console.log(newConcat); 
 
