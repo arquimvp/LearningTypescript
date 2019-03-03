@@ -1,18 +1,19 @@
-let heroes : number = 3;
-let villanos : number;
-let superHeroes: 2;
+let antman : string = "Antman el hombre hormiga";
+let hulk : string = 'Hulk el hombre verde';
+let worderWoman : string = `Wonder woman la mujer maravilla`;
 
-if(heroes > villanos) {
-    console.log('hay mas heroes que villanos');
-}else{
-    console.log(villanos);
-    console.log('hay mas villanos que heroes');
-}
+//Puedes verificar que al escribir antman tendras acceso a todos los metodos y propiedades de un string.
+antman.length;
+antman.split('/',0);
 
-superHeroes = 123;
-superHeroes = 123.123;
 
-//La siguientye linea no compilara:
-superHeroes = 'hola';
-    
-villanos = 76.456345345345;
+//Concatenar a la antigua:
+let oldConcat: string = "Los super heroes son: " + antman + ", " + hulk + worderWoman;
+
+//Concatenar con backtick:
+let newConcat: string = `Los super heroés son: ${antman}, ${hulk}, ${worderWoman} `;
+
+
+console.log(oldConcat);
+console.log(newConcat); 
+
