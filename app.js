@@ -1,22 +1,15 @@
-//✅:
-var isIronMan = true;
-//✅:
-var isWonderWoman;
-//🚫:
-var isThor = true;
-if (isIronMan) {
-    console.log('is ironman');
+var heroes = 3;
+var villanos;
+var superHeroes;
+if (heroes > villanos) {
+    console.log('hay mas heroes que villanos');
 }
 else {
-    console.log('no es ironman');
+    console.log(villanos);
+    console.log('hay mas villanos que heroes');
 }
-isIronMan = revertir();
-if (isIronMan) {
-    console.log('is ironman');
-}
-else {
-    console.log('no es ironman');
-}
-function revertir() {
-    return false;
-}
+superHeroes = 123;
+superHeroes = 123.123;
+//La siguientye linea no compilara:
+superHeroes = 'hola';
+villanos = 76.456345345345;

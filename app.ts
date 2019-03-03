@@ -1,24 +1,18 @@
-//✅:
-let isIronMan : boolean = true;
-//✅:
-    let isWonderWoman : boolean;	
-//🚫:
-    let isThor = true;
+let heroes : number = 3;
+let villanos : number;
+let superHeroes: 2;
 
-if(isIronMan) {
-    console.log('is ironman');
+if(heroes > villanos) {
+    console.log('hay mas heroes que villanos');
 }else{
-    console.log('no es ironman');
+    console.log(villanos);
+    console.log('hay mas villanos que heroes');
 }
 
-isIronMan = revertir();
+superHeroes = 123;
+superHeroes = 123.123;
 
-if(isIronMan) {
-    console.log('is ironman');
-}else{
-    console.log('no es ironman');
-}
-
-function revertir(){
-    return false;
-}
+//La siguientye linea no compilara:
+superHeroes = 'hola';
+    
+villanos = 76.456345345345;
