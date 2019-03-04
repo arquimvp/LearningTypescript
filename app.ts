@@ -1,19 +1,11 @@
-//✅
-let cualquierCosa: any;
+let arregloDeNumeros : number[] = [1,2,3,4,5,6];
 
-//Tambien podemos declararlo e inicializarlo: 
-/* let cualquierCosa: any = 23; */
+arregloDeNumeros.push(7);
+console.log(arregloDeNumeros);
 
-//O simplemente declararlo:
-/* let cualquierCosa; */
+let arregloDeStrings : string[] = ['a','b','c'];
 
-cualquierCosa = "Un texto";
-console.log(cualquierCosa.charAt(0));
-
-cualquierCosa = 123.123123;
-console.log(cualquierCosa.toFixed(2));
-
-cualquierCosa = true;
-console.log(cualquierCosa);
+arregloDeStrings.push('d');
+console.log(arregloDeStrings);
 
 
