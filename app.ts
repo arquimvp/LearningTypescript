@@ -1,9 +1,10 @@
-// En el siguiente ejemplo si no especifico el tipo void, typescript permite retornar cualquier tipo.
-
-function sinRetorno(): void {
-    console.log('no debe retornar nada');
+function error(mensaje:string): never {
+    throw new Error(mensaje);
 }
 
-let valor = sinRetorno();
+let inal = error('error critico tssss!');
 
-console.log(valor);
+console.log('no llega hasta aqui!');
+
+//Podemos percatarnos que la ejecucion jamas llega a la linea del console.log
+//Ademas el tipo never no nos permite retornar nada.
