@@ -1,11 +1,5 @@
-let arregloDeNumeros : number[] = [1,2,3,4,5,6];
+let superHeroe: [string, number, boolean] = ["hulk",12,true];
 
-arregloDeNumeros.push(7);
-console.log(arregloDeNumeros);
+superHeroe.push('hola');
 
-let arregloDeStrings : string[] = ['a','b','c'];
-
-arregloDeStrings.push('d');
-console.log(arregloDeStrings);
-
-
+console.log(superHeroe);
