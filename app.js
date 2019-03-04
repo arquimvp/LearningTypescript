@@ -1,7 +1,5 @@
-function error(mensaje) {
-    throw new Error(mensaje);
-}
-var inal = error('error critico tssss!');
-console.log('no llega hasta aqui!');
-//Podemos percatarnos que la ejecucion jamas llega a la linea del console.log
-//Ademas el tipo never no nos permite retornar nada.
+var cualquierCosa = "cualquier valor";
+var longitud = cualquierCosa.length;
+console.log(longitud);
+//En este caso yo se con toda seguridad que el valor a castear es un string, por lo cual
+//puedo obtener su longitud.
