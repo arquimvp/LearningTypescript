@@ -1,13 +1,9 @@
-//ejemplo de un control de volume en una app de audio.
-//Me sirve para hacer referencia a algun valor a traves de una descripcion mayormente logica.
+// En el siguiente ejemplo si no especifico el tipo void, typescript permite retornar cualquier tipo.
 
-enum Volume{
-    min = 1,
-    medio = 5,
-    max = 10
+function sinRetorno(): void {
+    console.log('no debe retornar nada');
 }
 
-let currentVolume: number = Volume.medio;
+let valor = sinRetorno();
 
-console.log(currentVolume);
-console.log(Volume);
+console.log(valor);
