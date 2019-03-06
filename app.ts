@@ -1,11 +1,22 @@
-//Funcion con parametros opcionales
-//Se agrega un ? despues del nombre del parametro
+//Funcion con parametros por defecto.
+//al asignar un parametro por defecto tambien se vuelve opcional.
 
-function nombreCompleto (nombre : string, apellido? : string): string {
-    return `${nombre} ${apellido}`
+function nombreCompleto (nombre : string, apellido : string, capitalizado: boolean = true): string {
+    
+    if(capitalizado){
+        return capitalize(nombre) + ' ' + capitalize(apellido);
+    }else{
+        return `${nombre} ${apellido}`
+    }
 }
 
-let nombre = nombreCompleto("juan");
+function capitalize(palabra : string) : string{
+    return palabra.charAt(0).toUpperCase() + palabra.substr(1).toLowerCase();
+}
 
-console.log(nombre)
+let nombre = nombreCompleto("juan",'mendez',false);
+let nombre2 = nombreCompleto('maria', 'jimenez');
+
+console.log(nombre);
+console.log(nombre2);
 
