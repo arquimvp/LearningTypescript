@@ -1,20 +1,9 @@
-//Declaracion de funcionesen typescript
+//Definicion de los parametros obligastorios.
 
-
-
-let nombre :  string = 'alberto';
-
-//Declaracion normal:
-function obtenerNombre() : string {
-  return nombre;
+function nombreCompleto (nombre: string, apellido: string): string {
+  return `${nombre} ${apellido}`;
 }
 
-//Declaracion asignando la funcion a una variable:
-let obtenNombre = function() : string{
-  return "camila";
-}
+let nombre = nombreCompleto("mario","martinez");
 
-
-console.log(obtenerNombre());
-console.log(obtenNombre());
-
+console.log(nombre);

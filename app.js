@@ -1,11 +1,5 @@
-var nombre = 'alberto';
-//Declaracion normal:
-function obtenerNombre() {
-    return nombre;
+function nombreCompleto(nombre, apellido) {
+    return nombre + " " + apellido;
 }
-//Declaracion asignado la funcion a una variable:
-var obtenNombre = function () {
-    return "camila";
-};
-console.log(obtenerNombre());
-console.log(obtenNombre());
+var nombre = nombreCompleto("mario", "martinez");
+console.log(nombre);
