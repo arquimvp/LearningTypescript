@@ -1,9 +1,11 @@
-//Definicion de los parametros obligastorios.
+//Funcion con parametros opcionales
+//Se agrega un ? despues del nombre del parametro
 
-function nombreCompleto (nombre: string, apellido: string): string {
-  return `${nombre} ${apellido}`;
+function nombreCompleto (nombre : string, apellido? : string): string {
+    return `${nombre} ${apellido}`
 }
 
-let nombre = nombreCompleto("mario","martinez");
+let nombre = nombreCompleto("juan");
 
-console.log(nombre);
+console.log(nombre)
+
