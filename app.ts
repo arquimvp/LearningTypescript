@@ -1,38 +1,33 @@
-//Tipo funcion
-//Sirve para definir un constraint que evite que una funcion pueda mutar
-//en algo que no esperamos.
-
-function sumar(a : number, b : number) : number {
+// Funciones Básicas
+function sumar( a, b ){
     return a + b;
-}
-
-function texto(texto : string) : string {
-    return `cualquier ${texto}`
-}
-
-function vacio(): void {
-    console.log('no hace nada');
-}
-
-
-//Aqui se permite que la variable funcionx pueda mutar:
-//let funcionx;
-
-//Aqui se evita que mute porque implementamos el constraint y no marca error en la 2da implementacion.
-let funcionx: (n1 : number, n2 : number) => number;
-
-funcionx = 7;                   //error
-
-funcionx = sumar;               //funciona ok
-console.log(funcionx(1,1));     
-
-funcionx = texto;               //error
-console.log(texto('algo'));     
-
-funcionx = vacio;               //error
-funcionx();
-
-
-
-
-
+  }
+  
+  var contar = function( heroes ){
+    return heroes.length;
+  }
+  var superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
+  contar(superHeroes);
+  
+  //Parametros por defecto
+  function llamarBatman( llamar ){
+    if( llamar ){
+      console.log("Batiseñal activada");
+    }
+  }
+  
+  llamarBatman();
+  
+  // Rest?
+  function unirheroes( ...personas:string[] ){
+    return personas.join(", ");
+  }
+  
+  
+  // Tipo funcion
+  function noHaceNada( numero, texto, booleano, arreglo ){
+  }
+  
+  // Crear el tipo de funcion que acepte la funcion "noHaceNada"
+  var noHaceNadaTampoco;
+  
