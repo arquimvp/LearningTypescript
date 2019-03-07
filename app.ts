@@ -1,22 +1,12 @@
-//Funcion con parametros por defecto.
-//al asignar un parametro por defecto tambien se vuelve opcional.
+//Funcion con parametros rest. (es6)
+//Es basicamente como decir todo lo que viene por parametro juntalo en un arreglo.
 
-function nombreCompleto (nombre : string, apellido : string, capitalizado: boolean = true): string {
-    
-    if(capitalizado){
-        return capitalize(nombre) + ' ' + capitalize(apellido);
-    }else{
-        return `${nombre} ${apellido}`
-    }
+function nombreCompleto( nombre : string, ...parametros: string []): string{
+    return nombre + ' ' + parametros.join(' ');
 }
 
-function capitalize(palabra : string) : string{
-    return palabra.charAt(0).toUpperCase() + palabra.substr(1).toLowerCase();
-}
+let nombre1 = nombreCompleto('mariano','alberto','martinez','apolinar');
+let nombre2 = nombreCompleto('roberto','lopez','jimenez');
 
-let nombre = nombreCompleto("juan",'mendez',false);
-let nombre2 = nombreCompleto('maria', 'jimenez');
-
-console.log(nombre);
+console.log(nombre1);
 console.log(nombre2);
-

@@ -1,17 +1,13 @@
-//Funcion con parametros por defecto
-function nombreCompleto(nombre, apellido, capitalizado) {
-    if (capitalizado === void 0) { capitalizado = true; }
-    if (capitalizado) {
-        return capitalize(nombre) + ' ' + capitalize(apellido);
+//Funcion con parametros rest. (es6)
+//Es basicamente como decir todo lo que viene por parametro juntalo en un arreglo.
+function nombreCompleto(nombre) {
+    var parametros = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        parametros[_i - 1] = arguments[_i];
     }
-    else {
-        return nombre + " " + apellido;
-    }
+    return nombre + ' ' + parametros.join(' ');
 }
-function capitalize(palabra) {
-    return palabra.charAt(0).toUpperCase() + palabra.substr(1).toLowerCase();
-}
-var nombre = nombreCompleto("juan", 'mendez', false);
-var nombre2 = nombreCompleto('maria', 'jimenez');
-console.log(nombre);
+var nombre1 = nombreCompleto('mariano', 'alberto', 'martinez', 'apolinar');
+var nombre2 = nombreCompleto('roberto', 'lopez', 'jimenez');
+console.log(nombre1);
 console.log(nombre2);
